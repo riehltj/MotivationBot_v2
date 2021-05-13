@@ -1,0 +1,136 @@
+@import "./colors";
+
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Monda", sans-serif;
+  background-image: url(./img/y-so-serious-white.png);
+  opacity: 0.8;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.container {
+  display: grid;
+  margin: 0vh 5vw 5vh 5vw;
+  grid-template-columns: repeat(3, 30vw);
+  grid-template-rows: 20vh 50vh 25vh;
+  gap: 2%;
+}
+.title {
+  line-height: 20vh;
+  font-size: clamp(8px, 5vw, 72px);
+  grid-column: 1/4;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.econ {
+  grid-column: 1/2;
+  grid-row: 2;
+}
+
+.box-container > h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  font-size: clamp(12px, 3vw, 36px);
+}
+
+.box {
+  display: grid;
+  height: 90%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 2fr;
+  gap: 10%;
+  border: solid black 10px;
+  border-radius: 15px;
+  padding: 5%;
+}
+
+//Container style
+.salary-container,
+.start-time-container {
+  font-size: clamp(12px, 2vw, 24px);
+  display: grid;
+  gap: 10%;
+  grid-template-columns: 1fr;
+  grid-row: 1fr 1fr;
+}
+
+input {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 25px;
+  outline: none;
+  padding-left: 10px;
+}
+input:focus {
+  padding-left: 10px;
+}
+
+.salary-container {
+  grid-column: 1;
+  grid-row: 1;
+}
+.start-time-container {
+  grid-column: 1;
+  grid-row: 2;
+}
+.made-today-container {
+  font-size: clamp(12px, 4vw, 36px);
+  grid-column: 1;
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.made-today-container > h3 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.made-js {
+  width: 100%;
+  color: green;
+  text-align: center;
+}
+
+.weather {
+  grid-column: 2/3;
+  grid-row: 2;
+}
+.city {
+  display: flex;
+  flex-direction: column;
+}
+
+#icon {
+  visibility: hidden;
+}
+.water {
+  grid-column: 3/4;
+  grid-row: 2;
+}
+.quote {
+  grid-column: 1/4;
+  grid-row: 3;
+}
+
+//DEBUG PURPOSE
+.container > div {
+  //border: 5px solid black;
+}
