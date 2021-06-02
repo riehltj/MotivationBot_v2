@@ -25,6 +25,3 @@ function clickedGo() {
 setInterval(function () {
     clickedGo();
 }, 1000);
-
-// /clickedGo();
-//

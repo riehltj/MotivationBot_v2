@@ -13,62 +13,84 @@
 <body>
     <div class="container">
         <div class="title">
-            <h1>Good Morning</h1>
+            <h1>Good <span class="time-of-day">Morning</span></h1>
         </div>
+        <div class="main-container">
+            <div class="econ box-container">
+                <h2>ECONOMY</h2>
+                <div class="box">
+                    <div class="salary-container">
+                        <label for="salary">Annual Salary:</label>
+                        <input type="number" id="salary" name="salary" value='' placeholder="$60,000">
+                    </div>
 
-        <div class="econ box-container">
-            <h2>ECONOMY</h2>
-            <div class="box">
-                <div class="salary-container">
-                    <label for="salary">Annual Salary:</label>
-                    <input type="number" id="salary" name="salary" value='' placeholder="$60,000">
+                    <div class="start-time-container">
+                        <label for="time-started">Time Started Today:</label>
+                        <input type="time" id="time" name="time" value="08:00">
+                    </div>
+
+                    <div class="made-today-container">
+                        <h3>Made Today:</h3>
+                        <h3 class="made-js">$100.00</h3>
+                    </div>
+
                 </div>
-
-                <div class="start-time-container">
-                    <label for="time-started">Time Started Today:</label>
-                    <input type="time" id="time" name="time" value="08:00">
-                </div>
-
-                <div class="made-today-container">
-                    <h3>Made Today:</h3>
-                    <span class="made-js">$100.00</span>
-                </div>
-
             </div>
-        </div>
 
-        <div class="water box-container">
-            <h2>Water</h2>
-            <div class="box"></div>
-        </div>
-        <div class="weather box-container">
-            <h2>weather</h2>
-            <div class="box">
-                <div class="weather-box" id="loc">
-                    <div class="city">
+
+            <div class="weather box-container">
+                <h2>weather</h2>
+                <div class="box">
+                    <div id="city-container" class="city">
                         <label for="city">Enter City:</label>
                         <input type="text" name="city" id="city" value="Tucson">
                         <button id="weather-button">Get Weather</button>
-                        <button id="geolocation-button">Geo Locate Me</button>
                     </div>
                     <div class="weather-js">
                         <div class="weather-box" id="temp"></div>
-                        <div class="weather-box"><img src="" id='icon' alt="weather icon"></div>
-                        <div class="weather-box" id="city-js"></div>
-                        <div class="weather-box" id="descr"></div>
+                        <div class="weather-box" id="icon-container">
+                            <img src="" id='icon' alt="weather icon">
+                            <div class="weather-box" id="weather"></div>
+                        </div>
+                        <input class="weather-box" id="city-js">
+                        </input>
                     </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="water box-container">
+                <h2>Water</h2>
+                <div class="box">
+
+                    <div class="shape">
+                        <div class="wave" id="wave-height">
+                        </div>
+                    </div>
+                    <button class="drink">Drink</button>
+
                 </div>
             </div>
         </div>
-    </div>
-    <div class="quote box-container">
-        <h2>quote</h2>
-        <div class="box"></div>
+
+        <div class="quote box-container">
+            <h2>quote</h2>
+            <div class="box">
+
+                <div class="quote-text"></div>
+                <div class="author"></div>
+            </div>
+        </div>
     </div>
 
 </body>
 <script src="./app/salary.js"></script>
 <script src="./app/weather.js"></script>
 <script src="./app/geo.js"></script>
+<script src="./app/water.js"></script>
+<script src="./app/greeting.js"></script>
+<script src="./app/quote.js"></script>
 
 </html>

@@ -1,0 +1,67 @@
+.box .shape {
+    position: relative;
+    height: 80%;
+    width: 35%;
+    border-radius: 10%;
+    margin-bottom: 5%;
+    overflow: hidden;
+}
+
+.box .shape::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    z-index: 3;
+    box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+}
+
+.shape .wave {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    transform: translate(-25%, 0);
+    background: #4973ff;
+    top: -40%;
+}
+
+.shape .wave:before,
+.shape .wave:after {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 60%;
+}
+
+.shape .wave:before {
+    border-radius: 45%;
+    background: rgba(179, 241, 255, 1);
+    animation: animate 3s linear infinite;
+}
+
+.shape .wave:after {
+    border-radius: 40%;
+    background: rgba(179, 241, 255, 0.5);
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-5%, -65%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-5%, -65%) rotate(360deg);
+    }
+
+}
+
+.drink {
+    font-family: "Monda", sans-serif;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
