@@ -1,7 +1,8 @@
 const element = document.getElementById('wave-height');
 const style = getComputedStyle(element)
 startingTop = parseInt(style.top);
-// console.log(startingTop)
+
+divSelect = document.querySelector('.bottles-drank')
 
 let clicks = 0;
 document.querySelector('.drink').addEventListener('click', function () {
@@ -13,6 +14,13 @@ document.querySelector('.drink').addEventListener('click', function () {
         clicks = 0;
         newTop = startingTop
 
+
+        node = document.createElement('img')
+        node = new Image(25, 50)
+
+        node.src = "./img/water.svg"
+
+        divSelect.appendChild(node)
     }
     // console.log(newTop)
     element.style.top = `${newTop}px`;

@@ -27,7 +27,7 @@ body,
 }
 
 .title {
-  font-size: clamp(24px, 5vw, 4em);
+  font-size: clamp(18px, 5vw, 4em);
   text-align: center;
 }
 
@@ -46,6 +46,9 @@ body,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 85vw;
+  margin: auto;
+  margin: 0 auto 5% auto;
 }
 
 .box-container {
@@ -131,6 +134,14 @@ body,
 
 #salary {
   height: 35%;
+}
+
+#weather-button {
+  height: 48px;
+}
+
+#city {
+  height: 48px;
 }
 
 .weather-js {
@@ -219,10 +230,19 @@ body,
       justify-self: center;
 }
 
+.water-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 35% 15% 35%;
+      grid-template-columns: 15% 35% 15% 35%;
+  -ms-grid-rows: 80% 20%;
+      grid-template-rows: 80% 20%;
+}
+
 .box .shape {
   position: relative;
-  height: 80%;
-  width: 35%;
+  height: 100%;
+  width: 100%;
   border-radius: 10%;
   margin-bottom: 5%;
   overflow: hidden;
@@ -300,5 +320,33 @@ body,
   text-transform: uppercase;
   font-size: 14px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.shape {
+  margin-top: 10%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.drink {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.bottles-drank {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
 }
 /*# sourceMappingURL=style.css.map */

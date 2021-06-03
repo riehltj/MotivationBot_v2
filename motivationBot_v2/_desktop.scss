@@ -27,7 +27,7 @@ body,
 }
 
 .title {
-  font-size: clamp(24px, 5vw, 4em);
+  font-size: clamp(18px, 5vw, 4em);
   text-align: center;
 }
 
@@ -37,6 +37,10 @@ body,
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  width: 85vw;
+  margin: auto;
+  margin: 0 auto 5% auto;
+
 }
 
 
@@ -94,6 +98,13 @@ body,
 }
 
 // Weather box styling
+#weather-button {
+  height: 48px;
+}
+
+#city {
+  height: 48px;
+}
 
 .weather-js {
   visibility: hidden;

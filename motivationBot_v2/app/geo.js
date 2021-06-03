@@ -57,7 +57,7 @@ function geolocate() {
         navigator.geolocation.getCurrentPosition(onGeolocateSuccess, onGeolocateError);
     }
 }
-geolocate();
+
 
 function getWeather(city) {
     url = `https://api.openweathermap.org/data/2.5/weather?q=${city},US&units=imperial&appid=${apiKey}`
@@ -96,4 +96,17 @@ document.getElementById('city-js').addEventListener('keypress', function (e) {
         getWeather(city)
 
     }
+});
+
+
+navigator.permissions.query({
+    name: 'geolocation'
+}).then(function (result) {
+    if (result.state === 'granted') {
+        console.log("granted")
+        geolocate();
+    } else if (result.state === 'prompt') {
+        console.log("prompt")
+    }
+    // Don't do anything if the permission was denied.
 });

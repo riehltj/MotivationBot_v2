@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="All in one single page to keep motivation while working your desk job. From how much you've made so far today to the weather to an inspirational quote. We even have a water bot running so you can show how many water bottles you've drank">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
@@ -25,7 +27,7 @@
                     </div>
 
                     <div class="start-time-container">
-                        <label for="time-started">Time Started Today:</label>
+                        <label for="time">Time Started Today:</label>
                         <input type="time" id="time" name="time" value="08:00">
                     </div>
 
@@ -52,7 +54,8 @@
                             <img src="" id='icon' alt="weather icon">
                             <div class="weather-box" id="weather"></div>
                         </div>
-                        <input class="weather-box" id="city-js">
+                        <label for="weather-box-js"></label>
+                        <input name="weather-box-js" class="weather-box" id="city-js">
                         </input>
                     </div>
                 </div>
@@ -63,12 +66,13 @@
 
             <div class="water box-container">
                 <h2>Water</h2>
-                <div class="box">
+                <div class="box water-box">
 
                     <div class="shape">
                         <div class="wave" id="wave-height">
                         </div>
                     </div>
+                    <div class="bottles-drank"></div>
                     <button class="drink">Drink</button>
 
                 </div>
@@ -87,7 +91,6 @@
 
 </body>
 <script src="./app/salary.js"></script>
-<script src="./app/weather.js"></script>
 <script src="./app/geo.js"></script>
 <script src="./app/water.js"></script>
 <script src="./app/greeting.js"></script>
