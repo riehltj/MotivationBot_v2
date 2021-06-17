@@ -97,6 +97,14 @@ body,
   height: 35%;
 }
 
+#time {
+  width: 50%;
+}
+
+h2 {
+  font-size: clamp(28px, 2vw, 4em);
+}
+
 // Weather box styling
 #weather-button {
   height: 48px;
@@ -153,9 +161,11 @@ body,
   height: 90%;
   text-align: center;
   justify-self: center;
+  font-size: 24px;
 }
 
 .author {
+  font-size: 24px;
   font-style: italic;
   height: 10%;
   text-align: center;
